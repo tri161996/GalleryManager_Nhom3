@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.horaapps.liz.ui.ThemedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/about_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:liz_background_style="normal"
+    android:orientation="vertical">
+    <!--TOOLBAR-->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:background="@color/md_dark_appbar"
+        android:windowActionBarOverlay="true" />
+
+    <ScrollView
+        android:id="@+id/aboutAct_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="@dimen/scroll_bar_size">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--ABOUT APP REDESIGN-->
+            <org.horaapps.liz.ui.ThemedCardView
+                android:id="@+id/about_app_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_spacing"
+                android:clickable="true"
+                android:foreground="@drawable/ripple"
+                android:paddingBottom="@dimen/card_spacing"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/leafpic_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/sub_medium_spacing"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/leaf_pic" />
+                    </RelativeLayout>
+
+                    <org.horaapps.liz.ui.ThemedTextView
+                        app:liz_color_style="accent"
+                        android:id="@+id/about_app_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/sub_small_spacing"
+                        android:text="Gallery"
+                        android:textSize="@dimen/big_text"
+                        android:textStyle="bold" />
+
+                    <org.horaapps.liz.ui.ThemedTextView
+                        app:liz_color_style="text"
+                        android:id="@+id/about_app_light_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/sub_small_spacing"
+                        android:text="@string/app_light_description"
+                        android:textSize="@dimen/medium_text" />
+
+                    <org.horaapps.liz.ui.ThemedTextView
+                        app:liz_color_style="sub_text"
+                        android:id="@+id/about_version_item_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/sub_small_spacing"
+                        android:text="Android - Nhom 3"
+                        android:textSize="@dimen/medium_text" />
+                </LinearLayout>
+            </org.horaapps.liz.ui.ThemedCardView>
+
+            <!-- Creators -->
+            <org.horaapps.liz.ui.ThemedCardView
+                android:id="@+id/about_creators_card"
+                style="@style/AboutCardStyle">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <org.horaapps.liz.ui.ThemedTextView
+                        app:liz_color_style="accent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/medium_spacing"
+                        android:paddingTop="@dimen/small_spacing"
+                        android:paddingBottom="@dimen/small_spacing"
+                        android:text="@string/creators"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold" />
+
+                    <!-- Donald -->
+                    <org.horaapps.leafpic.about.AboutCreator
+                        android:id="@+id/about_developer_donald"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:description="@string/about_author_donald_description"
+                        app:displayImage="@drawable/donald_profile"
+                        app:headerImage="@drawable/donald_header"
+                        app:name="Lê Thanh Tùng"
+                        app:role="1420266" />
+
+                    <org.horaapps.leafpic.about.AboutCreator
+                        android:id="@+id/about_developer_gilbert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_spacing"
+                        app:description="@string/about_author_gilbert_description"
+                        app:displayImage="@drawable/tri_profile"
+                        app:headerImage="@drawable/gilbert_header"
+                        app:name="Nguyễn Minh Trí"
+                        app:role="1420142" />
+
+                </LinearLayout>
+            </org.horaapps.liz.ui.ThemedCardView>
+
+
+            <!-- Creators -->
+            <org.horaapps.liz.ui.ThemedCardView
+                android:id="@+id/about_calvin_card"
+                style="@style/AboutCardStyle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <org.horaapps.liz.ui.ThemedTextView
+                        app:liz_color_style="accent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/medium_spacing"
+                        android:paddingTop="@dimen/small_spacing"
+                        android:paddingBottom="@dimen/small_spacing"
+                        android:text="@string/major_contributors"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/list_contributors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </org.horaapps.liz.ui.ThemedCardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</org.horaapps.liz.ui.ThemedLinearLayout>
